@@ -9,10 +9,10 @@
 	</parent>
 
 	<groupId>de.embl.cba</groupId>
-	<artifactId>XXX</artifactId>
-	<version>0.1.0</version>
+	<artifactId>classifiers</artifactId>
+	<version>0.1.01</version>
 
-	<name>XXX</name>
+	<name>classifiers</name>
 	<description>TODO</description>
 	<inceptionYear>2018</inceptionYear>
 	<organization>
@@ -54,14 +54,14 @@
 	</mailingLists>
 	
 	<scm>
-		<connection>scm:git:git://github.com/tischi/XXX</connection>
-		<developerConnection>scm:git:git@github.com/tischi/XXX</developerConnection>
+		<connection>scm:git:git://github.com/tischi/classifiers</connection>
+		<developerConnection>scm:git:git@github.com/tischi/classifiers</developerConnection>
 		<tag>HEAD</tag>
-		<url>https://github.com/tischi/XXX</url>
+		<url>https://github.com/tischi/classifiers</url>
 	</scm>
 	<issueManagement>
 		<system>GitHub</system>
-		<url>https://github.com/tischi/XXX/issues</url>
+		<url>https://github.com/tischi/classifiers/issues</url>
 	</issueManagement>
 	
 	<ciManagement>
@@ -69,13 +69,20 @@
 	</ciManagement>
 
 	<properties>
-		<package-name>de.embl.cba</package-name>
+		<package-name>de.embl.cba.classifiers</package-name>
 		<license.licenseName>bsd_2</license.licenseName>
 		<license.copyrightOwners>EMBL</license.copyrightOwners>
 		<imagej.app.directory>/Applications/Fiji.app/</imagej.app.directory>
 		<enforcer.skip>true</enforcer.skip>
 	</properties>
 
+	<distributionManagement>
+		<repository>
+			<id>bintray-tischi-snapshots</id>
+			<name>tischi-snapshots</name>
+			<url>https://api.bintray.com/maven/tischi/snapshots/bdv-utils/;publish=1</url>
+		</repository>
+	</distributionManagement>
 
 	<repositories>
 		<!-- NB: for SciJava dependencies -->
@@ -105,6 +112,12 @@
 		<dependency>
 			<groupId>net.imagej</groupId>
 			<artifactId>ij</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>nz.ac.waikato.cms.weka</groupId>
+			<artifactId>weka-dev</artifactId>
+			<version>3.9.2</version>
 		</dependency>
 
 	</dependencies>

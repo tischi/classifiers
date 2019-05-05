@@ -39,7 +39,8 @@ import java.util.Random;
  * 
  * @author Fran Supek (fran.supek[AT]irb.hr)
  */
-public class DataCache {
+public class DataCache
+{
 
   /** The dataset, first indexed by attribute, then by instance. */
   protected final float[][] vals;
@@ -231,7 +232,7 @@ public class DataCache {
    * @return a new DataCache - consult "DataCache(DataCache origData)"
    * constructor to see what's deep / shallow copied
    */
-  public DataCache resample(int bagSize, Random random) {
+  public DataCache resample( int bagSize, Random random) {
 
     DataCache result =
             new DataCache(this); // makes shallow copy of vals matrix

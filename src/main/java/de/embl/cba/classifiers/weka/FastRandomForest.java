@@ -690,7 +690,6 @@ public class FastRandomForest
     m_bagger.setComputeImportances(this.getComputeImportances());
     m_bagger.setBagSizePercent( Integer.parseInt( m_BatchSize ) );
     m_bagger.buildClassifier(data, m_NumThreads, this);
-
   }
 
 

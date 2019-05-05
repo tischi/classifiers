@@ -344,7 +344,7 @@ class FastRandomTree
    * @return the computed class distribution
    * @throws Exception if computation fails
    */
-  public double[] distributionForInstanceInDataCache(DataCache data, int instIdx) {
+  public double[] distributionForInstanceInDataCache( DataCache data, int instIdx) {
 
     double[] returnedDist = null;
 

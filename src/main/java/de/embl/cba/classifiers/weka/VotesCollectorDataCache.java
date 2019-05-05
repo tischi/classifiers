@@ -49,8 +49,8 @@ public class VotesCollectorDataCache implements Callable<Double>{
   protected final boolean[][] inBag;
 
 
-  public VotesCollectorDataCache(Classifier[] m_Classifiers, int instanceIdx,
-                        DataCache data, boolean[][] inBag){
+  public VotesCollectorDataCache( Classifier[] m_Classifiers, int instanceIdx,
+								  DataCache data, boolean[][] inBag){
     this.m_Classifiers = m_Classifiers;
     this.instanceIdx = instanceIdx;
     this.data = data;
@@ -76,8 +76,8 @@ public class VotesCollectorDataCache implements Callable<Double>{
       numVotes++;
       
       FastRandomTree aTree;
-      if ( m_Classifiers[treeIdx] instanceof FastRandomTree)
-        aTree = (FastRandomTree) m_Classifiers[treeIdx];
+      if ( m_Classifiers[treeIdx] instanceof FastRandomTree )
+        aTree = ( FastRandomTree ) m_Classifiers[treeIdx];
       else
         throw new IllegalArgumentException("Only FastRandomTrees accepted in the VotesCollector.");
 

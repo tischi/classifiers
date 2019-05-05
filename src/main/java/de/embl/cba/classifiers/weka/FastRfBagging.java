@@ -96,7 +96,7 @@ class FastRfBagging extends RandomizableIteratedSingleClassifierEnhancer
     // data = new Instances(data); // TISCHI commented this
     // data.deleteWithMissingClass(); // TISCHI commented this
 
-    if (!(m_Classifier instanceof FastRandomTree))
+    if (!(m_Classifier instanceof FastRandomTree ))
       throw new IllegalArgumentException("The FastRfBagging class accepts " +
         "only FastRandomTree as its base classifier.");
 
@@ -173,7 +173,7 @@ class FastRfBagging extends RandomizableIteratedSingleClassifierEnhancer
         // build the classifier
         if ( m_Classifiers[ treeIdx ] instanceof FastRandomTree )
         {
-          FastRandomTree aTree = (FastRandomTree) m_Classifiers[ treeIdx ];
+          FastRandomTree aTree = ( FastRandomTree ) m_Classifiers[ treeIdx ];
           aTree.data = bagData;
 
           Future<?> future = threadPool.submit( aTree );
@@ -241,7 +241,7 @@ class FastRfBagging extends RandomizableIteratedSingleClassifierEnhancer
         }
 
         for (int i = 0; i < m_Classifiers.length; i++) {
-          FastRandomTree tree = (FastRandomTree) m_Classifiers[ i ];
+          FastRandomTree tree = ( FastRandomTree ) m_Classifiers[ i ];
           tree.reassignAttributes( attIndicesList );
         }
       }
